@@ -50,8 +50,6 @@ jobs:
         with:
           node-version: '17'
 
-#      - name: Install dependencies
-#        run: npm ci
       - name: Install dependencies
         run: npm install
 
@@ -74,6 +72,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
+
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
@@ -82,7 +81,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Create new ElasticBeanstalk Application version
+      - name: Create new Elastic Beanstalk application version
         run: |
           aws elasticbeanstalk create-application-version \
             --application-name "${{ env.EB_APPLICATION }}" \
@@ -90,7 +89,7 @@ jobs:
             --version-label "${{ env.EB_VERSION }}" \
             --description "${{ env.EB_DESCRIPTION }}"
 
-      - name: Deploy artifact to ElasticBeanstalk
+      - name: Deploy artifact to Elastic Beanstalk
         run: |
           aws elasticbeanstalk update-environment \
             --environment-name "${{ env.EB_ENVIRONMENT }}" \
