@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
   "start": "node ./server/server.js",
+  "build": "echo 'No build step needed' && exit 0",
   "dev": "nodemon ./server/server.js",
   "postinstall": "rm package-lock.json && cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist"
   },
