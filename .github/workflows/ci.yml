@@ -94,3 +94,13 @@ jobs:
           aws elasticbeanstalk update-environment \
             --environment-name "${{ env.EB_ENVIRONMENT }}" \
             --version-label "${{ env.EB_VERSION }}"
+
+#
+      - name: Wait for deployment to complete
+        run: |
+          aws elasticbeanstalk wait environment-updated \
+            --environment-name "${{ env.EB_ENVIRONMENT }}"
+
+      - name: Clean up
+        run: |
+          aws s3 rm s3://${{ env.EB_DEPLOY_ARTIFACT_S3_BUCKET }}/${{ env.DEPLOY_ARTIFACT }}
