@@ -101,6 +101,6 @@ jobs:
           aws elasticbeanstalk wait environment-updated \
             --environment-name "${{ env.EB_ENVIRONMENT }}"
 
-      - name: Clean up
-        run: |
-          aws s3 rm s3://${{ env.EB_DEPLOY_ARTIFACT_S3_BUCKET }}/${{ env.DEPLOY_ARTIFACT }}
+#      - name: Clean up
+#        run: |
+#          aws s3 rm s3://${{ env.EB_DEPLOY_ARTIFACT_S3_BUCKET }}/${{ env.DEPLOY_ARTIFACT }}
