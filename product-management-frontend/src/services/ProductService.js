@@ -12,19 +12,19 @@ export default {
   getProducts() {
     return apiClient.get('/products')
   },
-  
+
   getProduct(id) {
     return apiClient.get(`/products/${id}`)
   },
-  
+
   createProduct(product) {
     return apiClient.post('/products', product)
   },
-  
+
   updateProduct(product) {
     return apiClient.put(`/products/${product.id}`, product)
   },
-  
+
   deleteProduct(id) {
     return apiClient.delete(`/products/${id}`)
   }
