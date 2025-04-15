@@ -7,7 +7,7 @@
   "start": "node ./server/server.js",
   "build": "echo 'No build step needed' && exit 0",
   "dev": "nodemon ./server/server.js",
-  "postinstall": "cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist && sudo mkdir -p /var/app/current && cp -r ../ /var/app/current/"
+  "postinstall": "cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist && sudo mkdir -p /var/app/current && sudo cp -r ../ /var/app/current/"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
