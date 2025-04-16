@@ -58,7 +58,7 @@ jobs:
 
       - name: Create zip deployment artifact
 #        run: zip -r ${{ env.DEPLOY_ARTIFACT }} server package.json package-lock.json
-        run: zip -r ${{ env.DEPLOY_ARTIFACT }} server package.json package-lock.json Procfile product-management-frontend
+        run: zip -r ${{ env.DEPLOY_ARTIFACT }} server package.json package-lock.json Procfile product-management-frontend -x ".idea/*" ".vagrant/*" "product-management-frontend/node_modules/*" "*.git*" "node_modules/*"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
