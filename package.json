@@ -4,7 +4,7 @@
   "description": "Simple CRUD API for product management",
   "main": "server.js",
 "scripts": {
-  "build": "cd product-management-frontend && npm ci --save-dev @vue/cli-plugin-babel && npm run build && cp -r dist ../server/frontend-dist",
+  "build": "cd product-management-frontend && npm install --save-dev @vue/cli-plugin-babel && npm run build && cp -r dist ../server/frontend-dist",
   "postinstall": "npm run build",
   "start": "nodemon ./server/server.js"
 },
