@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
   "start": "node ./server/server.js",
-  "build": "echo 'No build step needed' && exit 0",
-  "postinstall": "cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist && sudo mkdir -p /var/app/current && sudo cp -r ../ /var/app/current/",
+  "build": "cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist && sudo mkdir -p /var/app/current && sudo cp -r ../ /var/app/current/",
+  "postinstall": "npm run build",
   "dev": "nodemon ./server/server.js"
   },
   "dependencies": {
