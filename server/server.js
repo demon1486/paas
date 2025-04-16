@@ -16,6 +16,30 @@ const DATA_FILE = [
     "name": "New",
     "price": 34,
     "description": "product"
+  },
+  {
+    "id": 3,
+    "name": "Cucumber",
+    "price": 22,
+    "description": "vegetable"
+  },
+  {
+    "id": 4,
+    "name": "Tomato",
+    "price": 12,
+    "description": "vegetable"
+  },
+  {
+    "id": 5,
+    "name": "Potato",
+    "price": 10,
+    "description": "vegetable"
+  },
+  {
+    "id": 6,
+    "name": "Banana",
+    "price": 99,
+    "description": "fruit"
   }
 ]
 
