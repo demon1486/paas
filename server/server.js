@@ -9,7 +9,7 @@ const os = require('os');
 
 const app = express();
 //const PORT = 3000;
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 // const DATA_FILE = path.join(__dirname, 'products.json');
 const DATA_FILE = [
   {
@@ -176,7 +176,7 @@ app.delete('/api/products/:id', (req, res) => {
     let products = readProducts();
     const productId = parseInt(req.params.id);
     const productIndex = products.findIndex(p => p.id === productId);
-    
+
     if (productIndex === -1) {
       return res.status(404).json({ error: 'Product not found' });
     }
