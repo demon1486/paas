@@ -28,5 +28,29 @@
     "name": "Banana",
     "price": 99,
     "description": "fruit"
-  }
+  },
+    {
+        "id": 7,
+        "name": "Apple",
+        "price": 89,
+        "description": "fruit"
+    },
+    {
+        "id": 8,
+        "name": "Orange",
+        "price": 79,
+        "description": "fruit"
+    },
+    {
+        "id": 9,
+        "name": "Pineapple",
+        "price": 69,
+        "description": "fruit"
+    },
+    {
+        "id": 10,
+        "name": "Mango",
+        "price": 59,
+        "description": "fruit"
+    }
 ]
