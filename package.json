@@ -6,7 +6,7 @@
 "scripts": {
   "build": "cd product-management-frontend && npm ci --save-dev @vue/cli-plugin-babel && npm run build && cp -r dist ../server/frontend-dist",
   "postinstall": "npm run build",
-  "start": "nodemon ./server/server.js",
+  "start": "nodemon ./server/server.js"
 },
   "dependencies": {
     "body-parser": "^1.20.2",
