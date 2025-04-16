@@ -4,11 +4,11 @@
   "description": "Simple CRUD API for product management",
   "main": "server.js",
   "scripts": {
-    "start": "node ./server/server.js",
-    "build": "cd product-management-frontend && npm ci && npm run build && cp -r dist ../server/frontend-dist",
-    "postinstall": "npm run build",
-    "dev": "nodemon ./server/server.js"
-},
+  "start": "node ./server/server.js",
+  "build": "echo 'No build step needed' && exit 0",
+  "postinstall": "cd product-management-frontend && npm install --save-dev && npm run build && cp -r dist ../server/frontend-dist && sudo mkdir -p /var/app/current && sudo cp -r ../ /var/app/current/",
+  "dev": "nodemon ./server/server.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
