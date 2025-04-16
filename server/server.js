@@ -8,7 +8,6 @@ const os = require('os');
 
 
 const app = express();
-//const PORT = 3000;
 const PORT = process.env.PORT || 3000;
 // const DATA_FILE = path.join(__dirname, 'products.json');
 const DATA_FILE = [
